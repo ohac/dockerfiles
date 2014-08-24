@@ -1,5 +1,4 @@
-FROM ohac/base
-RUN apt-get -y install git automake m4 libcurl4-openssl-dev make g++
+FROM ohac/buildbase
 RUN git clone https://github.com/ohac/sha1coin-cpuminer.git
 ADD run.sh /
 RUN bash run.sh
