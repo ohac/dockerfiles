@@ -1,1 +1,2 @@
 docker build -t ohac/cpuminer .
+docker run -v $PWD/../bin:/target --rm ohac/cpuminer
