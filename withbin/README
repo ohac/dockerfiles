@@ -1,0 +1,6 @@
+strip bin/*
+docker build -t ohac/withbin .
+
+examples:
+docker run -d -it ohac/withbin sh run-minerd.sh
+docker run -d -it ohac/withbin sh run-sha1coind.sh
