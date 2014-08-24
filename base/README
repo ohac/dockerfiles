@@ -1,0 +1,1 @@
+docker build -t ohac/base:20140824 .
