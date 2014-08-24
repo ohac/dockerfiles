@@ -4,4 +4,6 @@ RUN git clone https://github.com/ohac/sha1coin
 RUN apt-get -y install libboost1.55-all-dev
 ADD sha1coin.sh /
 RUN bash sha1coin.sh
-ENTRYPOINT /bin/bash
+WORKDIR /sha1coin/src
+ENTRYPOINT ["/bin/cp"]
+CMD ["sha1coind", "/target"]

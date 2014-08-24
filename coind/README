@@ -1,0 +1,2 @@
+docker build -t ohac/coind .
+docker run -it --rm -v /tmp:/target ohac/coind
