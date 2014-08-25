@@ -3,6 +3,7 @@ FROM ohac/withbin
 RUN apt-get -y install wget curl htop vim
 RUN apt-get -y install supervisor
 RUN apt-get -y install git python-crypto
+RUN apt-get -y install python2.7 postgresql-9.3 python-psycopg2
 RUN useradd sha1coin
 RUN git clone https://github.com/ohac/bitcoin-abe.git
 RUN cd bitcoin-abe && python setup.py install
