@@ -13,4 +13,4 @@ ADD abe.conf /
 EXPOSE 2750 9513
 ENTRYPOINT ["/bin/sh", "startup.sh"]
 
-# MEMO: docker run -p 2750:2750 -p 9513:9513 -v $PWD/datadir:/mnt/datadir -it -d thisimagehash
+# MEMO: docker run -p 2750:2750 -p 9513:9513 -v $PWD/../datadir:/mnt/datadir -it -d thisimagehash
