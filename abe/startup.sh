@@ -10,5 +10,6 @@ fi
 service postgresql start
 sudo -u postgres createdb abe
 sudo -u postgres createuser root
+/etc/init.d/nginx start
 python -m Abe.abe --config abe.conf
 bash
