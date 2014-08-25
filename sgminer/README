@@ -1,0 +1,7 @@
+docker build -t ohac/sgminer .
+docker run -v $PWD/../withbin/bin:/target --rm ohac/sgminer
+
+# Runtime (Intel Host)
+# sudo apt-get install ocl-icd-libopencl1
+# sudo apt-get install beignet
+# GPU_MAX_ALLOC_PERCENT=100 ./sgminer -k sha1coin -o <host>:<port> -u <user> -p <password> -I 20 -g 1 -w 64 --trip GPGPU/
