@@ -11,6 +11,6 @@ ADD sha1coin.conf /etc/supervisor/conf.d/
 ADD startup.sh /
 ADD abe.conf /
 EXPOSE 2750 9513
-ENTRYPOINT ["/bin/sh", "startup.sh"]
+ENTRYPOINT ["/bin/bash", "startup.sh"]
 
 # MEMO: docker run -p 2750:2750 -p 9513:9513 -v $PWD/../datadir:/mnt/datadir -it -d thisimagehash
