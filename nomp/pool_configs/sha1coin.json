@@ -15,6 +15,7 @@
         "daemon": {
             "host": "127.0.0.1",
             "port": 9512, // sha1coin
+            // "port": 8332, // saya
             // "port": 9302, // sakuracoin
             "user": "u",
             "password": "p"
@@ -22,8 +23,9 @@
     },
 
     "ports": {
-        "3032": { // sakura 3032
+        "3032": { // saya 3033, sakura 3034
             "diff": 0.001 // sha1
+            //"diff": 1.0 // saya
             //"diff": 100.0 // sakura
         }
     },
@@ -32,6 +34,7 @@
         {
             "host": "127.0.0.1",
             "port": 9512, // sha1coin
+            // "port": 8332, // saya
             // "port": 9302, // sakuracoin
             "user": "u",
             "password": "p"
