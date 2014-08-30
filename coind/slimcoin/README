@@ -1,0 +1,2 @@
+docker build -t ohac/slimcoin .
+docker run -v $PWD/../../withbin/bin:/target --rm ohac/slimcoin

@@ -7,5 +7,6 @@ ADD bin/sha1coind /usr/bin/
 ADD bin/sakuracoind /usr/bin/
 ADD bin/sayacoind /usr/bin/
 ADD bin/yaycoind /usr/bin/
+ADD bin/slimcoind /usr/bin/
 ADD run-minerd.sh /
 ADD run-sha1coind.sh /
