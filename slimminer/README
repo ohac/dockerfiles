@@ -1,0 +1,2 @@
+docker build -t ohac/slimminer .
+docker run -v $PWD/../withbin/bin:/target --rm ohac/slimminer
