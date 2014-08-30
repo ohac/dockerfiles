@@ -1,6 +1,6 @@
 {
     "enabled": true,
-    "coin": "sha1coin.json",
+    "coin": "sayacoin.json",
 
     "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 
@@ -14,22 +14,22 @@
         "minimumPayment": 70,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 9512,
+            "port": 8332,
             "user": "u",
             "password": "p"
         }
     },
 
     "ports": {
-        "3032": {
-            "diff": 0.001
+        "3033": {
+            "diff": 1.0
         }
     },
 
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 9512,
+            "port": 8332,
             "user": "u",
             "password": "p"
         }
