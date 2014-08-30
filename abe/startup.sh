@@ -10,6 +10,9 @@ fi
 service postgresql start
 sudo -u postgres createdb abe
 sudo -u postgres createuser root
+service redis-server start
 /etc/init.d/nginx start
 python -m Abe.abe --config abe.conf
+#cd nomp
+#nodejs init.js
 bash
