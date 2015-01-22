@@ -1,0 +1,13 @@
+--- apt-p2p.conf.orig	2015-01-22 15:07:41.226636163 +0000
++++ apt-p2p.conf	2015-01-22 15:08:19.270635039 +0000
+@@ -75,9 +75,7 @@
+ # PORT = 
+ 
+ # bootstrap nodes to contact to join the DHT
+-BOOTSTRAP = www.camrdale.org:9977
+-            www.camrdale.org:9976
+-            steveholt.hopto.org:9976
++BOOTSTRAP = 192.168.24.135:9977
+ 
+ # whether this node is a bootstrap node
+ BOOTSTRAP_NODE = no
