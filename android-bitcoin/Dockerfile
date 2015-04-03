@@ -60,4 +60,14 @@ RUN cd /bitcoin-wallet && mvn clean
 
 RUN cd /bitcoin-wallet && mv pom.xml pom.xml.orig && grep -v sample pom.xml.orig > pom.xml && mvn install -DskipTests=true
 
+ENV ANDROID_SDK_COMPONENTS platform-tools,build-tools-22.0.1,android-16,extra-android-m2repository,extra-google-m2repository
+RUN echo y | android update sdk --no-ui --all --filter "${ANDROID_SDK_COMPONENTS}"
+
+ENV ANDROID_SDK_COMPONENTS android-14
+RUN echo y | android update sdk --no-ui --all --filter "${ANDROID_SDK_COMPONENTS}"
+RUN git clone https://github.com/ohac/sakuracoinj
+RUN git clone https://github.com/ohac/sakuracoin-wallet
+RUN cd /sakuracoinj && mvn install -DskipTests
+RUN cd /sakuracoin-wallet && mvn clean
+
 WORKDIR bitcoin-wallet
