@@ -14,5 +14,15 @@ RUN git clone https://github.com/fcitx/fcitx-skk.git
 RUN apt-get install -y fcitx-bin fcitx-data fcitx-modules skk skkdic gir1.2-skk-1.0
 RUN apt-get build-dep -y libskk
 RUN apt-get source -y libskk
-RUN cd libskk-1.0.2 && dpkg-buildpackage -uc -us
+#RUN cd libskk-1.0.2 && dpkg-buildpackage -uc -us
+RUN mv libskk-1.0.2/ libskk-1.0.2-orig && \
+    mv libskk-1.0.2-orig/debian/ libskk/ && \
+    mv libskk libskk-1.0.2 && \
+    cd libskk-1.0.2 && \
+    dpkg-buildpackage -b
+
 RUN dpkg -i libskk0_1.0.2-3_amd64.deb libskk-common_1.0.2-3_all.deb libskk-dev_1.0.2-3_amd64.deb
+
+# docker build -t ohac/skk .
+# mkdir tmp
+# docker run -it --rm -v $PWD/tmp:/tmp ohac/skk bash -c 'cp *.deb /tmp'
