@@ -1,6 +1,6 @@
-libskk (1.0.2-3-ohac1) vivid; urgency=medium
+libskk (1.0.2-3-ohac2) vivid; urgency=medium
 
   * Build by ohac
 
- -- OHASHI Hideya <ohachige@gmail.com>  Fri, 1 May 2015 13:23:05 +0900
+ -- OHASHI Hideya <ohachige@gmail.com>  Fri, 01 May 2015 18:12:42 +0900
 
