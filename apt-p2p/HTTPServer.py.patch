@@ -1,0 +1,14 @@
+--- HTTPServer.py.orig	2015-01-22 15:02:55.806644596 +0000
++++ HTTPServer.py	2015-01-22 15:06:08.810638893 +0000
+@@ -262,11 +262,6 @@
+         if len(name) > 1:
+             # It's a request from apt
+ 
+-            # Only local requests (apt) get past this point
+-            if request.remoteAddr.host != "127.0.0.1":
+-                log.msg('Blocked illegal access to %s from %s' % (request.uri, request.remoteAddr))
+-                return None, ()
+-
+             # Block access to index .diff files (for now)
+             if 'Packages.diff' in segments or 'Sources.diff' in segments or name == 'favicon.ico':
+                 return None, ()
