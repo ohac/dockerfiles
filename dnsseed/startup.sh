@@ -1,3 +1,3 @@
 service redis-server start
 /etc/init.d/supervisor start
-bash
+sleep 315360000
