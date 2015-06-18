@@ -15,4 +15,6 @@ ADD config.rb /dnsseed-ruby/
 EXPOSE 4567
 ENTRYPOINT ["/bin/bash", "startup.sh"]
 # docker run --name dnsseed -d -p 4567:4567 \
-#     -v $HOME/data/dnsseed:/var/lib/redis ohac/dnsseed
+#     -v $HOME/data/dnsseed:/var/lib/redis \
+#     -v $PWD/config.rb:/dnsseed-ruby/config.rb:ro \
+#     -v $PWD/aws-credentials:/root/.aws/credentials:ro ohac/dnsseed
