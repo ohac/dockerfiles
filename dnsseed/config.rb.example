@@ -2,7 +2,7 @@ CONFIG = {
   :sakuracoin => {
     :bootstrap => 'https://s3-ap-northeast-1.amazonaws.com/sighash/bootstrap/skr137100/bootstrap.dat?torrent',
     :port => 9301,
-    :magic => "\xfb\xc0\xb6\xdb",
+    :magic => ["fbc0b6db"].pack('H*'),
     :min_version => 70002,
     :subversion => 872,
     :unaccep_check_rate => 36 * 60 * 60,
@@ -29,7 +29,7 @@ CONFIG = {
   :sha1coin => {
     # :bootstrap => '',
     :port => 9513,
-    :magic => "\xfb\xc0\xb6\xdb",
+    :magic => ["fbc0b6db"].pack('H*'),
     :min_version => 70002,
     :subversion => 872,
     :seed_nodes => [
@@ -50,7 +50,7 @@ CONFIG = {
   :yaycoin => {
     # :bootstrap => '',
     :port => 8484,
-    :magic => "\xfb\xc0\xb6\xdb",
+    :magic => ["fbc0b6db"].pack('H*'),
     :min_version => 70002,
     :subversion => 868,
     :seed_nodes => [
@@ -71,7 +71,7 @@ CONFIG = {
   :sayacoin => {
     # :bootstrap => '',
     :port => 8666,
-    :magic => "\x53\x41\x59\x41",
+    :magic => ["53415941"].pack('H*'),
     :min_version => 70002,
     :subversion => 860,
     :seed_nodes => [
@@ -91,7 +91,7 @@ CONFIG = {
   :monacoin => {
     :bootstrap => 'https://s3-ap-northeast-1.amazonaws.com/sighash/bootstrap/mona139700/bootstrap.dat?torrent',
     :port => 9401,
-    :magic => "\xfb\xc0\xb6\xdb",
+    :magic => ["fbc0b6db"].pack('H*'),
     :min_version => 70002,
     :subversion => 870,
     :seed_nodes => [
@@ -108,7 +108,7 @@ CONFIG = {
   :ringo => {
     :bootstrap => 'https://s3-ap-northeast-1.amazonaws.com/sighash/bootstrap/rin25180/bootstrap.dat?torrent',
     :port => 9393,
-    :magic => "\x70\x35\x22\x05",
+    :magic => ["70352205"].pack('H*'),
     :min_version => 70002,
     :subversion => 1042,
     :seed_nodes => [
@@ -128,7 +128,7 @@ CONFIG = {
   },
   :kumacoin => {
     :port => 7586,
-    :magic => "\xc3\xd4\xd2\xfe",
+    :magic => ["c3d4d2fe"].pack('H*'),
     :ts => true,
     :min_version => 60007,
     :subversion => 892,
@@ -152,6 +152,22 @@ CONFIG = {
       ["182.163.78.67", 7586],
       ["117.18.175.9", 7586],
 
+    ]
+  },
+  :bitzeny => {
+    :port => 9253,
+    :magic => ["daa5bef9"].pack('H*'),
+    :min_version => 1010000,
+    :subversions => [
+      'Satoshi:1.1.0',
+    ],
+    :seed_nodes => [
+      ['153.120.5.171', 9253], # seed.bitzeny.org
+      ["54.68.124.6", 9253],
+      ["153.204.184.135", 9253],
+      ["125.54.144.246", 9253],
+      ["58.70.178.98", 9253],
+      ["116.70.225.107", 9253],
     ]
   },
 }
