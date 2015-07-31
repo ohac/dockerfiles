@@ -9,6 +9,6 @@ docker run -d -it ohac/withbin sh run-sha1coind.sh
 # sha1coin: 9512, 9513
 
 docker run -d -it -v /home/core/data/coind:/root \
-    -p 127.0.0.1:9302:9301 -p 127.0.0.1:9302:9302 \
-    -p 127.0.0.1:9512:9512 -p 127.0.0.1:9512:9513 \
+    -p 9301:9301 -p 127.0.0.1:9302:9302 \
+    -p 9513:9513 -p 127.0.0.1:9512:9512 \
     ohac/withbin sh run-coinds.sh
