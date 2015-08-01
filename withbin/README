@@ -4,6 +4,7 @@ docker build -t ohac/withbin .
 examples:
 docker run -d -it ohac/withbin sh run-minerd.sh
 docker run -d -it ohac/withbin sh run-sha1coind.sh
+docker run -d -it ohac/withbin sh run-coinds.sh
 
 # sakuracoin: 9301, 9302
 # sha1coin: 9512, 9513
