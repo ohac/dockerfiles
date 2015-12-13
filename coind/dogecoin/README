@@ -1,0 +1,4 @@
+docker build -t ohac/dogecoin .
+mkdir -p target
+docker run -v $PWD/target:/target --rm ohac/dogecoin bash -c "cp -f src/dogecoind src/dogecoin-cli src/dogecoin-tx /target"
+sudo chown -R $USER: target
